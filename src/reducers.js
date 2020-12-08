@@ -10,7 +10,7 @@ const taskList = (state = [], action) => {
     if (action.type === "MARK_TASK_AS_DONE") {
         return state.map(task => {
             if (task.id === action.payload) {
-                task.done = !task.done
+                return { ...task, done: !task.done };
             }
             return task;
         })

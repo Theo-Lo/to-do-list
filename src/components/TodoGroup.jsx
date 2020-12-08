@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 class TodoGroup extends Component {
     render() {
         const todoItems = this.props.taskList.map((task) => (
-            <TodoItemContainer key={uuidv4()} task={task} />));
+            <TodoItemContainer key={task.id} task={task} />));
         return (
             <div>
                 {todoItems}
