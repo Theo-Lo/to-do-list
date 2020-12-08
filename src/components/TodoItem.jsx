@@ -10,9 +10,12 @@ class TodoItem extends Component {
     };
 
     render() {
+        const isTaskDone = {
+            textDecorationLine: this.props.task.done ? 'line-through' : ''
+        };
         return (
             <div>
-                <label onClick={this.markTaskAsDone}>{this.props.task.text}</label>
+                <span onClick={this.markTaskAsDone} style={isTaskDone}>{this.props.task.text}</span>
                 <button onClick={this.deleteTask}>x</button>
             </div>
         );
