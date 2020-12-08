@@ -1,21 +1,21 @@
-import { ADD_TASK, DELETE_TASK, MARK_TASK_AS_DONE} from './actionTypes';
+import { ADD_TASK, DELETE_TASK, MARK_TASK_AS_DONE } from './actionTypes';
 
 export const addTask = (task) => {
-    return { 
+    return {
         type: ADD_TASK,
         payload: task
     };
 }
 
 export const deleteTask = (id) => {
-    return { 
+    return {
         type: DELETE_TASK,
         payload: id
     };
 }
 
 export const markTaskAsDone = (id) => {
-    return { 
+    return {
         type: MARK_TASK_AS_DONE,
         payload: id
     };

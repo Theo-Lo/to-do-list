@@ -18,7 +18,7 @@ class TodoGenerator extends Component {
             <div>
                 <Form onFinish={(values) => this.addTask(values)}>
                     <FormItem name="task">
-                        <Input type="text" placeholder="input a new todo here..."/>
+                        <Input type="text" placeholder="input a new todo here..." />
                     </FormItem>
                     <FormItem>
                         <Button type="primary" htmlType="submit">add</Button>
