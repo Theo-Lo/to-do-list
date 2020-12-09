@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./TodoItem.css"
 
 class TodoItem extends Component {
     markTaskAsDone = () => {
@@ -10,12 +11,10 @@ class TodoItem extends Component {
     };
 
     render() {
-        const isTaskDone = {
-            textDecorationLine: this.props.task.done ? 'line-through' : ''
-        };
+        const taskDoneStyle = this.props.task.done ? "taskDoneStyle" : "";
         return (
             <div>
-                <span onClick={this.markTaskAsDone} style={isTaskDone}>{this.props.task.text}</span>
+                <span onClick={this.markTaskAsDone} className={taskDoneStyle}>{this.props.task.text}</span>
                 <button onClick={this.deleteTask}>x</button>
             </div>
         );
