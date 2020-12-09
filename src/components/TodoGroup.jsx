@@ -6,7 +6,7 @@ class TodoGroup extends Component {
     componentDidMount() {
         getTodoList().then(response => {
             this.props.initTodoList(response.data);
-    });
+        });
     }
 
     render() {

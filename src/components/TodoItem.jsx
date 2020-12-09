@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import "./TodoItem.css"
+import { updateTodo, deleteTodo } from '../apis/todos';
 
 class TodoItem extends Component {
     markTaskAsDone = () => {
-        this.props.markTaskAsDone(this.props.task.id);
+        updateTodo(this.props.task.id, {...this.props.task, done:!this.props.task.done}).then(response => {
+            this.props.markTaskAsDone(response.data);
+        });
     };
 
     deleteTask = () => {
-        this.props.deleteTask(this.props.task.id);
+        deleteTodo(this.props.task.id).then(response=>{
+            this.props.deleteTask(response.data.id)
+        })
     };
 
     render() {

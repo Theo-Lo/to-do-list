@@ -8,8 +8,8 @@ const mapDispatchToProps = (dispatch) => {
         deleteTask: (id) => {
             dispatch(deleteTask(id));
         },
-        markTaskAsDone: (id) => {
-            dispatch(markTaskAsDone(id))
+        markTaskAsDone: (todo) => {
+            dispatch(markTaskAsDone(todo))
         }
     };
 };

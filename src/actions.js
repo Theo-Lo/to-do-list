@@ -14,10 +14,10 @@ export const deleteTask = (id) => {
     };
 }
 
-export const markTaskAsDone = (id) => {
+export const markTaskAsDone = (todo) => {
     return {
         type: MARK_TASK_AS_DONE,
-        payload: id
+        payload: todo
     };
 }
 

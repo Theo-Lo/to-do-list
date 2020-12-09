@@ -12,11 +12,6 @@ class TodoGenerator extends Component {
     }
     addTask = (values) => {
         addNewTodo(values.task).then(response => {
-            // const task = {
-            //     id: uuidv4(),
-            //     text: values.task,
-            //     done: false
-            // };
             this.props.addTask(response.data);
         });
        
