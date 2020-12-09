@@ -1,4 +1,4 @@
-import { ADD_TASK, DELETE_TASK, MARK_TASK_AS_DONE } from './actionTypes';
+import { ADD_TASK, DELETE_TASK, MARK_TASK_AS_DONE, INIT_TODOS } from './actionTypes';
 
 export const addTask = (task) => {
     return {
@@ -18,5 +18,12 @@ export const markTaskAsDone = (id) => {
     return {
         type: MARK_TASK_AS_DONE,
         payload: id
+    };
+}
+
+export const initTodos = (todos) => {
+    return {
+        type: INIT_TODOS,
+        payload: todos
     };
 }

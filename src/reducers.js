@@ -15,6 +15,9 @@ const taskList = (state = [], action) => {
             return task;
         })
     }
+    if(action.type=== "INIT_TODOS"){
+        return action.payload
+    }
     return state;
 };
 
