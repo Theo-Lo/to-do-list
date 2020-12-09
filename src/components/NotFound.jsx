@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { Divider } from "antd";
+
 class NotFound extends Component {
     render() {
         return (
             <div>
-                <h1>Page Not Found</h1>
+                <Divider orientation="center">Page Not Found</Divider>
             </div>
         );
     }

@@ -15,8 +15,24 @@ const taskList = (state = [], action) => {
             return task;
         })
     }
-    if(action.type=== "INIT_TODOS"){
-        return action.payload
+    if (action.type === "INIT_TODOS") {
+        return action.payload;
+    }
+    if (action.type === "DELETE_LABEL") {
+        return state.map(task => {
+            if (task.id === action.payload.id) {
+                return action.payload;
+            }
+            return task;
+        })
+    }
+    if (action.type === "ADD_LABEL") {
+        return state.map(task => {
+            if (task.id === action.payload.id) {
+                return action.payload;
+            }
+            return task;
+        })
     }
     return state;
 };

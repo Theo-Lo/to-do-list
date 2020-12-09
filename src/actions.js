@@ -1,4 +1,4 @@
-import { ADD_TASK, DELETE_TASK, MARK_TASK_AS_DONE, INIT_TODOS } from './actionTypes';
+import { ADD_TASK, DELETE_TASK, MARK_TASK_AS_DONE, INIT_TODOS, DELETE_LABEL, ADD_LABEL } from './actionTypes';
 
 export const addTask = (task) => {
     return {
@@ -25,5 +25,19 @@ export const initTodos = (todos) => {
     return {
         type: INIT_TODOS,
         payload: todos
+    };
+}
+
+export const deleteLabel = (todo) => {
+    return {
+        type: DELETE_LABEL,
+        payload: todo
+    };
+}
+
+export const addLabel = (todo) => {
+    return {
+        type: ADD_LABEL,
+        payload: todo
     };
 }

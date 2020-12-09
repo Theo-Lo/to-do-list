@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getTodoList } from '../apis/todos';
 import TodoItemContainer from '../containers/TodoItemContainer'
+import "./TodoItem.css"
 
 class TodoGroup extends Component {
     componentDidMount() {
@@ -11,7 +12,7 @@ class TodoGroup extends Component {
 
     render() {
         const todoItems = this.props.taskList.map((task) => (
-            <TodoItemContainer key={task.id} task={task} />));
+            <TodoItemContainer className="todo-container" key={task.id} task={task} />));
         return (
             <div>
                 {todoItems}

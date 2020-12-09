@@ -1,4 +1,4 @@
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import TodoDone from '../components/TodoDone';
 
 const mapStateToProps = state => {

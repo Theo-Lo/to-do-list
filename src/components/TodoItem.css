@@ -1,4 +1,24 @@
 .task-done-style {
     text-decoration: line-through solid;
   }
-  
+
+.box {
+    border: 1px solid rgb(107, 107, 107);
+    padding: 5px 20px 5px 20px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    width: 100%;
+}
+
+.todo-container {
+    margin: 10px 200px;
+    padding: 30px 20px;
+    text-align: left;
+}
+
+.button-to-right {
+    margin-left: 20px;
+    float: right;
+    display: inline-flex;
+}

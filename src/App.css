@@ -24,6 +24,19 @@
   color: white;
 }
 
+#root .ant-layout {
+  background-color: white;
+}
+
+#root .ant-layout-header {
+  padding : 0;
+}
+
+.main-container {
+  align-items: center;
+  justify-content: center;
+}
+
 .App-link {
   color: #61dafb;
 }

@@ -12,6 +12,6 @@ const mapDispatchToProps = (dispatch) => ({
     },
 })
 
-const TodoGroupContainer = connect(mapStateToProps,  mapDispatchToProps)(TodoGroup);
+const TodoGroupContainer = connect(mapStateToProps, mapDispatchToProps)(TodoGroup);
 
 export default TodoGroupContainer;
