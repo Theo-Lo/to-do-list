@@ -2,6 +2,7 @@ import FormItem from 'antd/lib/form/FormItem';
 import React, { Component, createRef } from 'react';
 import { Form, Input, Button } from "antd";
 import { v4 as uuidv4 } from 'uuid';
+import {addNewTodo} from '../apis/todos';
 
 class TodoGenerator extends Component {
     constructor(props){
@@ -10,12 +11,15 @@ class TodoGenerator extends Component {
         this.formRef = createRef();
     }
     addTask = (values) => {
-        const task = {
-            id: uuidv4(),
-            text: values.task,
-            done: false
-        };
-        this.props.addTask(task);
+        addNewTodo(values.task).then(response => {
+            // const task = {
+            //     id: uuidv4(),
+            //     text: values.task,
+            //     done: false
+            // };
+            this.props.addTask(response.data);
+        });
+       
         this.formRef.current.resetFields();
     };
 
