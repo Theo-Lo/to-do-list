@@ -11,7 +11,7 @@ class TodoItem extends Component {
     };
 
     render() {
-        const taskDoneStyle = this.props.task.done ? "taskDoneStyle" : "";
+        const taskDoneStyle = this.props.task.done ? "task-done-style" : "";
         return (
             <div>
                 <span onClick={this.markTaskAsDone} className={taskDoneStyle}>{this.props.task.text}</span>
