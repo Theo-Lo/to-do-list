@@ -7,38 +7,17 @@ import { Tag } from 'antd';
 class TodoLabel extends Component {
 
     deleteLabel = () => {
-        updateTodoLabel(this.props.task.id, {
-            ...this.props.task, labels: this.props.task.labels.filter(label => label !== this.props.label)
-        }).then(response => {
-            this.props.removeLabel(response.data);
+        const labelIdList = this.props.task.labels.map(label => label.id).filter(id => id !== this.props.label.id);
+        updateTodoLabel(this.props.task.id, { ...this.props.task, labelIdList: labelIdList }).then(response => {
+            this.props.markTaskAsDone(response.data);
         });
     }
 
-    chooseColor = () => {
-        switch (this.props.label) {
-            case "Habbits":
-                return "lime";
-
-            case "Work":
-                return "red";
-
-            case "School":
-                return "blue";
-
-            case "Rest":
-                return "gold";
-
-            default:
-                return "magenta";
-        }
-    }
-
     render() {
-        const color = this.chooseColor();
         return (
             <section>
-                <Tag color={color} closable onClose={this.deleteLabel}>
-                    {this.props.label}
+                <Tag color={this.props.label.color} closable onClose={this.deleteLabel}>
+                    {this.props.label.label}
                 </Tag>
             </section>
         );

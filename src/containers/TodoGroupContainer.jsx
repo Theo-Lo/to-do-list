@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import TodoGroup from "../components/TodoGroup";
-import { initTodos } from "../actions";
+import { initTodos, initLabels } from "../actions";
 
 const mapStateToProps = state => ({
     taskList: state.taskList
@@ -9,6 +9,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch) => ({
     initTodoList: (todos) => {
         dispatch(initTodos(todos));
+    },
+    initLabelList: (labels) => {
+        dispatch(initLabels(labels));
     },
 })
 

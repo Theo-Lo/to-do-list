@@ -5,7 +5,7 @@ export const getTodoList = () => {
 }
 
 export const addNewTodo = (text) => {
-    return api.post("/todos", { text });
+    return api.post("/todos", { text: text, done: false, labelIdList: [] });
 }
 
 export const deleteTodo = (id) => {

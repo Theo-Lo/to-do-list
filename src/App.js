@@ -6,6 +6,7 @@ import NotFound from './components/NotFound.jsx';
 import DoneListContainer from "./containers/DoneListContainer.jsx";
 import { Row, Col } from 'antd';
 import NavigationContainer from './containers/NavigationContainer.jsx';
+import LabelManagerContainer from './containers/LabelManagerContainer.jsx';
 import { Layout } from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -26,6 +27,7 @@ function App() {
               <Col span={18}>
                 <Switch >
                   <Route exact path="/done" component={DoneListContainer}></Route>
+                  <Route exact path="/label" component={LabelManagerContainer}></Route>
                   <Route exact path="/" component={TodoList}></Route>
                   <Route component={NotFound}></Route>
                 </Switch>

@@ -4,3 +4,4 @@ export const MARK_TASK_AS_DONE = 'MARK_TASK_AS_DONE';
 export const INIT_TODOS = 'INIT_TODOS';
 export const DELETE_LABEL = 'DELETE_LABEL';
 export const ADD_LABEL = 'ADD_LABEL';
+export const INIT_LABELS = 'INIT_LABELS';

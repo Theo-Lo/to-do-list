@@ -18,10 +18,15 @@ class TodoGenerator extends Component {
         this.formRef.current.resetFields();
     };
 
+    calculatePercentage = (taskList) => {
+        const totalTask = taskList.length;
+        const doneTask = taskList.filter(task => task.done).length;
+        return Math.round((doneTask / totalTask) * 100);
+    }
+
     render() {
-        const totalTask = this.props.taskList.length;
-        const doneTask = this.props.taskList.filter(task => task.done == true).length;
-        const percentage = Math.round((doneTask / totalTask) * 100);
+        const percentage = this.calculatePercentage(this.props.taskList);
+
         return (
             <div >
                 <Form ref={this.formRef} layout="inline" onFinish={(values) => this.addTask(values)}>

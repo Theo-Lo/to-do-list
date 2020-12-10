@@ -6,7 +6,7 @@ import TodoLabelContainer from "../containers/TodoLabelContainer"
 class TodoDoneItem extends Component {
     render() {
         const todoLabels = this.props.task.labels.map((label) => (
-            <TodoLabelContainer key={uuidv4} label={label} task={this.props.task} />));
+            <TodoLabelContainer key={label.id} label={label} task={this.props.task} />));
         return (
             <div>
                 <section>

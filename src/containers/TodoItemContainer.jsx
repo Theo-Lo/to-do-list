@@ -2,6 +2,10 @@ import { connect } from 'react-redux';
 import TodoItem from "../components/TodoItem";
 import { deleteTask, markTaskAsDone, addLabel } from "../actions";
 
+const mapStateToProps = state => ({
+    labelList: state.labelList
+});
+
 const mapDispatchToProps = (dispatch) => {
     return {
         deleteTask: (id) => {
@@ -9,13 +13,10 @@ const mapDispatchToProps = (dispatch) => {
         },
         markTaskAsDone: (todo) => {
             dispatch(markTaskAsDone(todo))
-        },
-        addLabel: (todo) => {
-            dispatch(addLabel(todo))
         }
     };
 };
 
-const TodoItemContainer = connect(null, mapDispatchToProps)(TodoItem);
+const TodoItemContainer = connect(mapStateToProps, mapDispatchToProps)(TodoItem);
 
 export default TodoItemContainer;
