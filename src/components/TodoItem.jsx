@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import "./TodoItem.css"
 import { updateTodoLabel, deleteTodo } from '../apis/todos';
 import { Menu, Dropdown, Button } from 'antd';
-import { DownOutlined, UserOutlined, DeleteOutlined, CheckCircleOutlined } from '@ant-design/icons';
-import { v4 as uuidv4 } from "uuid";
+import { DownOutlined, DeleteOutlined, CheckCircleOutlined } from '@ant-design/icons';
 import TodoLabelContainer from "../containers/TodoLabelContainer"
 
 

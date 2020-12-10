@@ -9,6 +9,8 @@ class TodoList extends Component {
             <div>
                 <Divider orientation="center">Todo List</Divider>
                 <TodoGroupContainer />
+                <br></br>
+                <br></br>
                 <TodoGeneratorContainer />
             </div>
         );
