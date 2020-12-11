@@ -51,7 +51,7 @@ class LabelAdder extends Component {
         return (
             <div >
                 <Form ref={this.formRef} layout="inline" onFinish={(values) => this.addLabel(values)}>
-                    <FormItem name="label" className="inputBox" >
+                    <FormItem name="label" >
                         <Input type="text" placeholder="Add your new tag here" />
                     </FormItem>
                     <FormItem name="color">

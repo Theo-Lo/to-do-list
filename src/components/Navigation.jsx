@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { Menu, Badge } from 'antd';
-import { UnorderedListOutlined, CheckSquareOutlined } from '@ant-design/icons';
+import { UnorderedListOutlined, CheckSquareOutlined, HighlightOutlined } from '@ant-design/icons';
 
 class Navigation extends Component {
     render() {
@@ -20,7 +20,7 @@ class Navigation extends Component {
                         <Link to="/done">Task Done List</Link>
                     </Badge>
                 </Menu.Item>
-                <Menu.Item key="label" icon={<CheckSquareOutlined />}>
+                <Menu.Item key="label" icon={<HighlightOutlined />}>
                     <Link to="/label">Label Manager</Link>
                 </Menu.Item>
             </Menu>
