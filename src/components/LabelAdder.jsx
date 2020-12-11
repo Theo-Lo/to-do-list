@@ -14,8 +14,14 @@ class LabelAdder extends Component {
 
 
     addLabel = (values) => {
-        console.log(this.state.color);
-        if (this.props.labelList.includes(values.label)) { return; }
+        for (var label in this.props.labelList) {
+            console.log(label);
+            if (this.props.labelList[label].label == values.label) {
+                this.setState({ color: "red" });
+                this.formRef.current.resetFields();
+                return;
+            }
+        };
         const newLabel = {
             label: values.label,
             color: this.state.color,
